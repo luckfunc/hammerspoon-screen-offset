@@ -5,6 +5,9 @@ local targetScreenWidth = 1296
 -- ✅ 白名单：只有这些 App 会被限制
 local TARGET_APPS = {
     "Google Chrome",
+    "WebStorm",
+    "Code",
+    "网易云音乐"
     -- "Arc",
     -- "Microsoft Edge",
 }
@@ -59,3 +62,11 @@ for _, win in pairs(hs.window.allWindows()) do
 end
 
 print("✓ restricted apps:", table.concat(TARGET_APPS, ", "))
+
+-- 在console执行，拿到正在运行的App的Name
+-- hs.fnutils.each(hs.window.allWindows(), function(win)
+--   local app = win:application()
+--   if app then
+--     print(app:name())
+--   end
+-- end)
